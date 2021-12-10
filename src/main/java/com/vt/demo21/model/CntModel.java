@@ -6,8 +6,8 @@ import java.util.Date;
 import com.ejlchina.searcher.bean.DbField;
 import com.ejlchina.searcher.bean.SearchBean;
 
-@SearchBean(tables = "cntm010 a, cntm015 b, psnm110 c, basm060 d", joinCond = "a.item=b.item and a.ct_no=b.ct_no and a.sale_no=c.emp_no and a.cust_no=d.cust_no"
-		+ " and a.item not in ('BS','ST','TT')")
+@SearchBean(tables = "cntm010 a, cntm015 b, psnm110 c, basm060 d", joinCond = "a.item=b.item and a.ct_no=b.ct_no"
+		+ " and a.sale_no=c.emp_no and a.cust_no=d.cust_no and a.item not in ('BS','ST','TT')")
 
 public class CntModel {
 
@@ -16,34 +16,34 @@ public class CntModel {
 
 	@DbField("a.item")
 	private String item;
-	
+
 	@DbField("a.ct_no")
 	private Integer ctNo;
-	
+
 	@DbField("a.buld_name")
 	private String buldName;
-	
+
 	@DbField("a.ct_date")
 	private Date ctDate;
-	
+
 	@DbField("a.sale_no")
 	private Integer saleNo;
-	
+
 	@DbField("a.sal_ctr")
 	private String salCtr;
-	
+
 	@DbField("a.cust_no")
 	private Integer custNo;
-	
+
 	@DbField("a.nt_amnt")
 	private BigDecimal ntAmnt;
-	
+
 	@DbField("b.comp_2")
 	private String comp2;
 
 	@DbField("b.sal_beg_cost")
 	private BigDecimal salBegCost;
-	
+
 	@DbField("c.emp_name")
 	private String empName;
 
